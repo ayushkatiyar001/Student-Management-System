@@ -32,25 +32,15 @@ This application translates foundational software engineering theories into prac
 
 ## 📊 Logical Flow Diagram
 
-```mermaid
-graph TD
-    A[User Interface / Console Menu] --> B{Choose Option}
-    
-    B -->|Choice 1| C[Add Student]
-    C --> C1[Instantiates Student Object]
-    C1 --> C2[Persists in Student Object Array]
-    
-    B -->|Choice 2| D[Display All]
-    D --> D1[Loops Object Array]
-    D1 --> D2[Triggers Polymorphic displayInfo]
-    
-    B -->|Choice 3| E[Calculate Marks]
-    E --> E1[Inputs Theory/Practical]
-    E --> E2[Evaluates Overloaded calculateGrade]
-    
-    B -->|Choice 4| F[Exit Process]
-    F --> F1[Closes Scanner Stream]
-    F1 --> F2[System Terminated]
+[User Interface / Console Menu]
+       │
+       ├───► Choice 1: Add Student ───► Instantiates Student Object ───► Persists in Object Array
+       │
+       ├───► Choice 2: Display All ───► Loops Through Object Array ───► Triggers Polymorphic displayInfo()
+       │
+       ├───► Choice 3: Calculate ─────► Inputs Theory & Practical ─────► Evaluates Overloaded calculateGrade()
+       │
+       └───► Choice 4: Exit Process ──► Closes Scanner Input Stream ──► System Terminated Successfully
 
 ## 📋 Technical Prerequisites
 
