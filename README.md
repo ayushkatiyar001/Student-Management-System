@@ -32,10 +32,6 @@ This application translates foundational software engineering theories into prac
 
 ## 📊 Logical Flow Diagram
 
-The dynamic routing within the runtime stack works as follows:
-
-## 📊 Logical Flow Diagram
-
 ```mermaid
 graph TD
     A[User Interface / Console Menu] --> B{Choose Option}
