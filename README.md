@@ -29,9 +29,9 @@ This application translates foundational software engineering theories into prac
 - Built explicit, input-sanitized interactive control flows using the `java.util.Scanner` interface, preventing structural memory leaks via explicit stream termination (`sc.close()`).
 
 ---
-
 ## 📊 Logical Flow Diagram
 
+```text
 [User Interface / Console Menu]
        │
        ├───► Choice 1: Add Student ───► Instantiates Student Object ───► Persists in Object Array
@@ -41,7 +41,7 @@ This application translates foundational software engineering theories into prac
        ├───► Choice 3: Calculate ─────► Inputs Theory & Practical ─────► Evaluates Overloaded calculateGrade()
        │
        └───► Choice 4: Exit Process ──► Closes Scanner Input Stream ──► System Terminated Successfully
-
+```
 ## 📋 Technical Prerequisites
 
 - **Java Development Kit (JDK):** Version 8, 11, 17, or 21.
