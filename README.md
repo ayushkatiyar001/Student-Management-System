@@ -56,3 +56,12 @@ This application translates foundational software engineering theories into prac
 ```bash
 git clone [https://github.com/ayushkatiyar001/Student-Management-System.git](https://github.com/ayushkatiyar001/Student-Management-System.git)
 cd Student-Management-System
+```
+###Step 2: Compile the Module Source
+```bash
+javac StudentManagement.java
+```
+###Step 3: Run the Driver Application
+```bash
+java StudentManagement
+```
