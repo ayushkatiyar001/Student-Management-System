@@ -55,10 +55,6 @@ graph TD
     B -->|Choice 4| F[Exit Process]
     F --> F1[Closes Scanner Stream]
     F1 --> F2[System Terminated]
-    
-    style A fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style B fill:#4b5563,stroke:#9ca3af,stroke-width:2px,color:#fff
-    style F2 fill:#dc2626,stroke:#ef4444,stroke-width:2px,color:#fff
 
 ## 📋 Technical Prerequisites
 
