@@ -34,15 +34,31 @@ This application translates foundational software engineering theories into prac
 
 The dynamic routing within the runtime stack works as follows:
 
-[User Interface / Console Menu]
-|
-+---> Choice 1: Add Student ---> Instantiates [Student Object] ---> Persists in [Student Object Array]
-|
-+---> Choice 2: Display All ---> Loops [Object Array] ---> Triggers Polymorphic [displayInfo()]
-|
-+---> Choice 3: Calculate   ---> Inputs Theory/Practical ---> Evaluates Overloaded [calculateGrade()]
-|
-+---> Choice 4: Exit Process ---> Closes Scanner ---> System Terminated
+## 📊 Logical Flow Diagram
+
+```mermaid
+graph TD
+    A[User Interface / Console Menu] --> B{Choose Option}
+    
+    B -->|Choice 1| C[Add Student]
+    C --> C1[Instantiates Student Object]
+    C1 --> C2[Persists in Student Object Array]
+    
+    B -->|Choice 2| D[Display All]
+    D --> D1[Loops Object Array]
+    D1 --> D2[Triggers Polymorphic displayInfo]
+    
+    B -->|Choice 3| E[Calculate Marks]
+    E --> E1[Inputs Theory/Practical]
+    E --> E2[Evaluates Overloaded calculateGrade]
+    
+    B -->|Choice 4| F[Exit Process]
+    F --> F1[Closes Scanner Stream]
+    F1 --> F2[System Terminated]
+    
+    style A fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style B fill:#4b5563,stroke:#9ca3af,stroke-width:2px,color:#fff
+    style F2 fill:#dc2626,stroke:#ef4444,stroke-width:2px,color:#fff
 
 ## 📋 Technical Prerequisites
 
