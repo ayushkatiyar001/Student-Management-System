@@ -1,59 +1,60 @@
-📘 Student Management System - Java (Console-Based)
-🧾 Description
-This is a console-based Student Management System implemented in Java. It uses Object-Oriented Programming (OOP) principles such as inheritance, method overloading, method overriding, and constructor overloading.
+# Student Management System (SMS) 🎓
 
-The program allows the user to:
+An enterprise-ready, modular console application engineered in Core Java to streamline student academic profiling, record tracking, and multi-metric grade calculations. This project serves as a comprehensive demonstration of core Object-Oriented Programming (OOP) architectures and data persistence structures.
 
-Add student records
-Display all stored student information
-Calculate grades using either overall marks or a combination of theory and practical marks
-🛠️ Features
-Add multiple student records (up to 100)
-Display complete student details
-Grade calculation using:
-Total marks
-Separate theory and practical marks
-Menu-driven interface
-Demonstrates key OOP concepts
-👨‍🏫 OOP Concepts Demonstrated
-Concept	Description
-Inheritance	Student inherits from Person
-Method Overriding	displayInfo() is overridden in Student
-Method Overloading	calculateGrade() is overloaded to support different inputs
-Constructor Overloading	Both classes have default and parameterized constructors
-🔍 How It Works
-Add Student
-Inputs: Name, Age, Roll Number, Marks
-→ Creates and stores a new Student object.
+---
 
-Display Students
-→ Lists all students with name, age, roll number, marks, and grade.
+## 📌 Project Overview
 
-Calculate Grade (Theory & Practical)
-Inputs: Theory Marks, Practical Marks
-→ Calculates average and displays grade using overloading.
+In educational institutions, managing student records and dynamically calculating grades based on varying evaluation metrics can be highly error-prone. This **Student Management System** provides an efficient, lightweight CLI environment to create, read, and process student entities while handling logical validations seamlessly.
 
-Exit
-→ Closes the program.
+---
 
-🖥️ Code Structure
-class Person
-└── name, age
-└── displayInfo()
+## 🛠️ Core OOP Architecture & Principles Applied
 
-class Student extends Person
-└── rollNo, marks
-└── calculateGrade(double)
-└── calculateGrade(int, int)
-└── displayInfo() [overridden]
+This application translates foundational software engineering theories into practical, production-ready code modules:
 
-public class StudentManagement
-└── main() method with menu logic
+### 1. Robust Inheritance Pattern (`super`)
+- **Design:** Created a top-level abstract entity base class `Person` containing common biological attributes (`name`, `age`).
+- **Implementation:** Extended `Person` into a specialized derived `Student` class. Used the `super()` and `super(name, age)` constructor chaining mechanisms to optimize object memory allocation and enforce rigid architectural reusability.
 
-✅ Requirements
-Java JDK 8 or later
+### 2. Polymorphism (Compile-time & Runtime)
+- **Method Overloading:** Engineered two distinct logical signatures for `calculateGrade()`. 
+  - One accepts a centralized `double marks` parameter for direct conversions.
+  - The other acts as a multi-split business logic handler, accepting `int theoryMarks` and `int practicalMarks` to compute average evaluations.
+- **Method Overriding:** Fully overrode the `displayInfo()` method utilizing the `@Override` annotation. By leveraging `super.displayInfo()`, the subclass dynamically injects derived entity states safely at runtime without mutating base behaviors.
 
-Any Java IDE (like IntelliJ, Eclipse, or VS Code) or command line
+### 3. Data Structuring & State Management
+- Managed data states safely inside an **Array of Objects** (`Student[]`) bounded structurally within safe iterative indexing boundaries.
+- Built explicit, input-sanitized interactive control flows using the `java.util.Scanner` interface, preventing structural memory leaks via explicit stream termination (`sc.close()`).
 
-📁 File
-CODE — Contains all class definitions and the main driver logic.
+---
+
+## 📊 Logical Flow Diagram
+
+The dynamic routing within the runtime stack works as follows:
+
+[User Interface / Console Menu]
+|
++---> Choice 1: Add Student ---> Instantiates [Student Object] ---> Persists in [Student Object Array]
+|
++---> Choice 2: Display All ---> Loops [Object Array] ---> Triggers Polymorphic [displayInfo()]
+|
++---> Choice 3: Calculate   ---> Inputs Theory/Practical ---> Evaluates Overloaded [calculateGrade()]
+|
++---> Choice 4: Exit Process ---> Closes Scanner ---> System Terminated
+
+## 📋 Technical Prerequisites
+
+- **Java Development Kit (JDK):** Version 8, 11, 17, or 21.
+- **Environment Path:** Properly configured `JAVA_HOME` variables.
+- **IDE Support:** IntelliJ IDEA (Recommended), Eclipse, or VS Code with Java Extension Pack.
+
+---
+
+## 💻 Installation & Local Deployment Steps
+
+### Step 1: Clone the Repository
+```bash
+git clone [https://github.com/ayushkatiyar001/Student-Management-System.git](https://github.com/ayushkatiyar001/Student-Management-System.git)
+cd Student-Management-System
